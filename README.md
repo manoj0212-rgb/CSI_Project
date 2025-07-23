@@ -52,6 +52,12 @@ smart-stepper-form/
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [Click here to view the live demo](https://manoj0212-rgb.github.io/CSI_Project/)
+
+---
+
 ### 1️⃣ Step 1 – Personal Details  
 ![Step 1 – Personal Details](CSI_Project_1.png)
 
