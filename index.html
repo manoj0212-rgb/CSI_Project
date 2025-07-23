@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stepper Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form id="multi-step-form">
+    <div class="progressbar">
+      <div class="step active">1</div>
+      <div class="step">2</div>
+      <div class="step">3</div>
+      <div class="step">4</div>
+      <div id="progress"></div>
+    </div>
+
+    <!-- Step 1: Personal Info -->
+    <div class="form-step active">
+      <h2>Personal Info</h2>
+      <label for="fname">First Name :</label>
+      <input type="text" id="fname" placeholder="First Name" required />
+      <label for="lname">last Name :</label>
+      <input type="text" id="lname" placeholder="Last Name" required />
+      <label for="father">Father's Name :</label>
+      <input type="text" id="father" placeholder="Father's Name" required />
+      <label for="dob">Date of Birth :</label>
+      <input type="date" id="dob"  min="1950-01-01" max="2007-12-31" required />
+      <label for="gender">Gender :</label>
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <label for="phone">Phone No. :</label>
+      <input type="tel" id="phone" placeholder="Phone" required />
+      <label for="email">Email :</label>
+      <input type="email" id="email" placeholder="Email" required />
+      <label for="address">Address :</label>
+      <input type="text" id="address" placeholder="Address" required />
+      <label for="city">City :</label>
+      <input type="text" id="city" placeholder="City" required />
+      <label for="state">State :</label>
+      <input type="text" id="state" placeholder="State" required />
+      <label for="pincode">Pincode :</label>
+      <input type="text" id="pincode" placeholder="Pincode" required />
+      <button type="button" class="next-btn">Save & Next</button>
+    </div>
+
+    <!-- Step 2: Education -->
+    <div class="form-step">
+      <h2>Education Details</h2>
+      <h3>Secondary Education</h3>
+      <label for="secSchool">School :</label>
+      <input type="text" id="secSchool" placeholder="Secondary School" required />
+      <label for="secRoll">Roll No. :</label>
+      <input type="text" id="secRoll" placeholder="Roll No" required />
+      <label for="secPercent">CGPA/Percentage :</label>
+      <input type="text" id="secPercent" placeholder="Percentage" required />
+      <h3>Higher Secondary Education</h3>
+      <label for="hsSchool">School :</label>
+      <input type="text" id="hsSchool" placeholder="Higher Secondary School" required />
+      <label for="hsRoll">Roll No. :</label>
+      <input type="text" id="hsRoll" placeholder="Roll No" required />
+      <label for="hsPercent">CGPA/Percentage :</label>
+      <input type="text" id="hsPercent" placeholder="Percentage" required />
+      <h3>Graduation</h3>
+      <label for="gradUni">University/College :</label>
+      <input type="text" id="gradUni" placeholder="Graduation University" required />
+      <label for="gradRoll">Roll No. :</label>
+      <input type="text" id="gradRoll" placeholder="Roll No" required />
+      <label for="gradPercent">CGPA/Percentage :</label>
+      <input type="text" id="gradPercent" placeholder="Percentage" required />
+      <div class="buttons">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Save & Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Upload -->
+    <div class="form-step">
+      <h2>Upload Documents</h2>
+      <label>Upload Photo <input type="file" id="photo" accept="image/*" required /></label>
+      <label>Upload Signature <input type="file" id="sign" accept="image/*" required /></label>
+      <div class="buttons">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Save & Next</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Preview -->
+    <div class="form-step">
+      <h2>Preview</h2>
+      <div id="previewData"></div>
+     <div style="margin-top: 20px;">
+       <label style="display: flex; align-items: center; gap: 8px;">
+         <input type="checkbox" id="declaration" required />
+           <span>I hereby declare that the above information is correct.</span>
+        </label>
+      </div>
+
+        <div class="buttons">
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+      <button type="button" id="downloadBtn" style="display:none;">Download PDF</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
